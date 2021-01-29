@@ -49,6 +49,7 @@ function detallesValidacion(){
   h2.style.border = 'none';
   h3.style.backgroundColor = 'lime';
   h3.style.border = '2px solid darkgreen';
+  h3.style.fontFamily = 'Open Sans, Helvetica Neue, sans-serif';
   h3.style.width = '220px'
 }
 
