@@ -24,8 +24,35 @@
 
 // BOILERPLATE
 const form = document.querySelector("form");
+
+const validados = document.querySelectorAll(".requerido");
+const h2 = document.createElement('h2');
+const h3 = document.createElement('h3');
+const script = document.querySelector("script");
+const parentForm = form.parentElement;
+
+// TEXTO A INSERTAR
+
+let textoValidacion = '';
+let textoError = '';
+
+function detallesError(){
+  h2.style.backgroundColor = 'pink';
+  h2.style.border = '2px solid red';
+  h2.style.fontFamily = 'Open Sans, Helvetica Neue, sans-serif';
+  h2.style.width = '440px'
+  h3.style.backgroundColor = 'transparent';
+  h3.style.border = 'none';
+}
+function detallesValidacion(){
+  h2.style.backgroundColor = 'red';
+  h2.style.border = 'none';
+  h3.style.backgroundColor = 'lime';
+  h3.style.border = '2px solid darkgreen';
+  h3.style.width = '220px'
+}
+
 form.addEventListener("submit", function(e) {
   e.preventDefault();
-  
   console.log("FORMULARIO ENVIADO");
 });
