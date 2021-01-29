@@ -55,5 +55,22 @@ function detallesValidacion(){
 
 form.addEventListener("submit", function(e) {
   e.preventDefault();
+  validados.forEach(element => {
+    if(element.value == ''){
+      textoError = "Ocurrio un error, verifica los siguientes campos";
+      textoValidacion = '';
+      // BORDE DE LOS INPUTS
+      element.style.border = '2px solid red';
+      detallesError();
+    } else{
+      textoValidacion = "Su formulario fue enviado";
+      textoERror = '';
+      detallesValidacion();
+    }
+  });
+  h2.innerText = textoError;
+  h3.innerText = textoValidacion;
+  parentForm.insertBefore(h2, form);
+  parentForm.insertBefore(h3, script);
   console.log("FORMULARIO ENVIADO");
 });
